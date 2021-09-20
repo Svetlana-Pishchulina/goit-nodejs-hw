@@ -16,22 +16,22 @@ const getContactById = (contactId) => {
   return searchedUser;
 };
 
-const removeContact = (contactId) => {
+const removeContact = async (contactId) => {
   const newContactslist = allContacts.filter(
     (contact) => contact.id != contactId
   );
   if (allContacts.length === newContactslist.length) {
     return null;
   }
-  fs.writeFile(contactsPath, JSON.stringify(newContactslist));
+  await fs.writeFile(contactsPath, JSON.stringify(newContactslist));
   return newContactslist;
 };
 
-const addContact = (name, email, phone) => {
+const addContact = async (name, email, phone) => {
   const newUserId = allContacts[allContacts.length - 1].id + 1;
   const newUser = { id: newUserId, name, email, phone };
   const newContactslist = [...allContacts, newUser];
-  fs.writeFile(contactsPath, JSON.stringify(newContactslist));
+  await fs.writeFile(contactsPath, JSON.stringify(newContactslist));
   return newContactslist;
 };
 
