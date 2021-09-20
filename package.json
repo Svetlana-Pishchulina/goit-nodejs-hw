@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svetlana-Pishchulina/goit-nodejs-hw-1.git"
+  },
+  "author": "Svetlana Pishchulina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Svetlana-Pishchulina/goit-nodejs-hw-1/issues"
+  },
+  "homepage": "https://github.com/Svetlana-Pishchulina/goit-nodejs-hw-1#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "yargs": "^17.1.1"
+  }
+}
