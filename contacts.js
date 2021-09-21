@@ -4,11 +4,11 @@ const path = require("path");
 const contactsPath = path.join(__dirname, "db", "contacts.json");
 const allContacts = require("./db/contacts.json");
 
-const listContacts = () => {
+const listContacts = async () => {
   return allContacts;
 };
 
-const getContactById = (contactId) => {
+const getContactById = async (contactId) => {
   const searchedUser = allContacts.find((contact) => contact.id === contactId);
   if (!searchedUser) {
     return null;
